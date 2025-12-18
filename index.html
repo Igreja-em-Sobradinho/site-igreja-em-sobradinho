@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Igreja — Bem-vindo</title>
+  <meta name="description" content="Site da igreja: eventos, login de membros, galeria e blog." />
+
+  <!-- Tipografias -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Cabeçalho e navegação -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Página inicial">
+        <span class="brand-name">Igreja</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a class="btn-nav active" href="index.html">Home</a></li>
+          <li><a class="btn-nav" href="evento.html">Eventos</a></li>
+          <li><a class="btn-nav" href="galeria.html">Galeria</a></li>
+          <li><a class="btn-nav" href="index.html#blog">Blog</a></li>
+          <li><a class="btn-nav btn-outline" href="index.html#login">Entrar</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Banner (hero) -->
+  <section class="hero" aria-label="Banner de boas-vindas">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Venha, escute e viva a mensagem</h1>
+      <p class="hero-subtitle">Comunidade de fé, serviço e esperança.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#eventos">Ver próximos eventos</a>
+        <a class="btn-link" href="#sobre">Conheça a igreja</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eventos -->
+  <section id="eventos" class="section" aria-labelledby="eventos-title">
+    <div class="container">
+      <h2 id="eventos-title" class="section-title">Eventos</h2>
+
+      <!-- Lista de próximos eventos -->
+      <div class="cards">
+        <article class="card">
+          <h3 class="card-title">Culto de Domingo</h3>
+          <p class="card-meta">Dom, 10:00 — Santuário</p>
+          <p class="card-text">Celebração comunitária com louvor e mensagem.</p>
+          <button class="btn-outline">Inscrever-se</button>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Encontro de Jovens</h3>
+          <p class="card-meta">Sáb, 18:30 — Salão</p>
+          <p class="card-text">Conexão, estudo e atividades.</p>
+          <button class="btn-outline">Inscrever-se</button>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Estudo Bíblico</h3>
+          <p class="card-meta">Qua, 19:00 — Sala 2</p>
+          <p class="card-text">Reflexões e conversas guiadas.</p>
+          <button class="btn-outline">Inscrever-se</button>
+        </article>
+      </div>
+
+      <!-- Calendário simples (sem JS) -->
+      <div class="calendar" aria-label="Calendário mensal">
+        <div class="calendar-header">
+          <span class="cal-month">Dezembro 2025</span>
+          <div class="cal-actions">
+            <button class="btn-icon" aria-label="Mês anterior">‹</button>
+            <button class="btn-icon" aria-label="Próximo mês">›</button>
+          </div>
+        </div>
+        <div class="calendar-grid" role="grid">
+          <div class="cal-weekday">Seg</div><div class="cal-weekday">Ter</div><div class="cal-weekday">Qua</div><div class="cal-weekday">Qui</div><div class="cal-weekday">Sex</div><div class="cal-weekday">Sáb</div><div class="cal-weekday">Dom</div>
+          <!-- Apenas demonstrativo -->
+          <button class="cal-day has-event" aria-label="Dia 1 — reunião de homens">1</button>
+          <button class="cal-day has-event" aria-label="Dia 2 — Estudo Bíblico">2</button>
+          <button class="cal-day" aria-label="Dia 3">3</button>
+          <button class="cal-day" aria-label="Dia 4">4</button>
+          <button class="cal-day has-event" aria-label="Dia 5 — Encontro de Jovens">5</button>
+          <button class="cal-day has-event" aria-label="Dia 6 — reunião as ">6</button>
+          <button class="cal-day has-event" aria-label="Dia 7 — partir do pão">7</button>
+          <!-- Continue conforme necessidade -->
+        </div>
+        <p class="calendar-tip">Selecione um dia com destaque para ver eventos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="section section-muted" aria-labelledby="login-title">
+    <div class="container login-grid">
+      <div class="login-info">
+        <h2 id="login-title" class="section-title">Área de membros</h2>
+        <p class="lead">Acesso restrito para integrantes da igreja: documentos, comunicados e agenda de ministérios.</p>
+        <ul class="list">
+          <li><strong>Documentos:</strong> atas, escalas e materiais.</li>
+          <li><strong>Comunicados:</strong> avisos recentes e históricos.</li>
+          <li><strong>Agenda:</strong> reuniões e tarefas por ministério.</li>
+        </ul>
+      </div>
+      <form class="login-form" aria-label="Formulário de login">
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+        </div>
+        <div class="form-field">
+          <label for="senha">Senha</label>
+          <input id="senha" name="senha" type="password" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn-primary">Entrar</button>
+        <p class="form-note"><a href="#">Esqueci minha senha</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sobre a igreja -->
+  <section id="sobre" class="section" aria-labelledby="sobre-title">
+    <div class="container about-grid">
+      <div>
+        <h2 id="sobre-title" class="section-title">Sobre a igreja</h2>
+        <p class="lead">Somos uma comunidade dedicada a viver e compartilhar a fé com amor, serviço e esperança.</p>
+        <p>Fundada para acolher e inspirar, promovemos encontros, estudos e ações sociais que fortalecem nossa caminhada.</p>
+      </div>
+      <div class="about-card">
+        <h3 class="card-title">Missão</h3>
+        <p>Servir a Deus e ao próximo, cultivando fé e compaixão.</p>
+        <h3 class="card-title">Valores</h3>
+        <p>Amor, integridade, comunidade e generosidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section id="galeria" class="section" aria-labelledby="galeria-title">
+    <div class="container">
+      <h2 id="galeria-title" class="section-title">Galeria de eventos</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Louvor comunitário com pessoas de mãos levantadas" />
+          <figcaption>Louvor comunitário</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1516026672321-3ea535f0a3b4?q=80&w=1200&auto=format&fit=crop" alt="Vitral com desenho simbólico iluminado pela luz" />
+          <figcaption>Vitral iluminado</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=1200&auto=format&fit=crop" alt="Mãos erguidas durante celebração" />
+          <figcaption>Celebração</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1523365280197-f4f9a44b4b49?q=80&w=1200&auto=format&fit=crop" alt="Casamento no interior da igreja" />
+          <figcaption>Casamento</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog / Notícias -->
+  <section id="blog" class="section section-muted" aria-labelledby="blog-title">
+    <div class="container">
+      <h2 id="blog-title" class="section-title">Blog e notícias</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <a href="#" class="blog-media">
+            <img src="https://images.unsplash.com/photo-1532074205216-d0e1f4e0f9aa?q=80&w=1200&auto=format&fit=crop" alt="Cruz de madeira com coroa de espinhos" />
+          </a>
+          <div class="blog-content">
+            <h3 class="blog-title"><a href="#">Reflexões de fé</a></h3>
+            <p class="blog-meta">5 de agosto</p>
+            <p class="blog-excerpt">Uma mensagem sobre esperança e comunidade para a semana.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a href="#" class="blog-media">
+            <img src="https://images.unsplash.com/photo-1519885272020-52a7f36b1b96?q=80&w=1200&auto=format&fit=crop" alt="Pessoa em oração sob luz natural" />
+          </a>
+          <div class="blog-content">
+            <h3 class="blog-title"><a href="#">Serviço e propósito</a></h3>
+            <p class="blog-meta">29 de julho</p>
+            <p class="blog-excerpt">Como servir ao próximo transforma nossa caminhada diária.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Igreja</p>
+      <p class="footer-note">© 2025 — Comunidade de fé e serviço.</p>
+    </div>
+  </footer>
+
+  <!-- Script mínimo para menu mobile (opcional) -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
