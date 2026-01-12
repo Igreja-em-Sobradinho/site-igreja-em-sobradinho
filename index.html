@@ -4,18 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Igreja — Bem-vindo</title>
-  <meta name="description" content="Site da igreja: eventos, login de membros, galeria e blog." />
+  <meta name="description" content="Site da igreja: eventos, login de membros, galeria e blog." /> 
 
   <!-- Tipografias -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
   <!-- Cabeçalho e navegação -->
@@ -30,7 +26,7 @@
           <li><a class="btn-nav" href="evento.html">Eventos</a></li>
           <li><a class="btn-nav" href="galeria.html">Galeria</a></li>
           <li><a class="btn-nav" href="index.html#blog">Blog</a></li>
-          <li><a class="btn-nav btn-outline" href="index.html#login">Entrar</a></li>
+          <!-- <li><a class="btn-nav btn-outline" href="index.html#login">Entrar</a></li> -->
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
@@ -41,8 +37,8 @@
   <section class="hero" aria-label="Banner de boas-vindas">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <h1 class="hero-title">Venha, escute e viva a mensagem</h1>
-      <p class="hero-subtitle">Comunidade de fé, serviço e esperança.</p>
+      <h1 class="hero-title">Jesus é o senhor!</h1>
+      <p class="hero-subtitle">fé, serviço e esperança.</p>
       <div class="hero-actions">
         <a class="btn-primary" href="#eventos">Ver próximos eventos</a>
         <a class="btn-link" href="#sobre">Conheça a igreja</a>
@@ -59,19 +55,19 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Culto de Domingo</h3>
-          <p class="card-meta">Dom, 10:00 — Santuário</p>
-          <p class="card-text">Celebração comunitária com louvor e mensagem.</p>
+          <p class="card-meta">Dom, 9:30</p>
+          <p class="card-text">Partir do pão.</p>
           <button class="btn-outline">Inscrever-se</button>
         </article>
         <article class="card">
-          <h3 class="card-title">Encontro de Jovens</h3>
-          <p class="card-meta">Sáb, 18:30 — Salão</p>
+          <h3 class="card-title">Reunião de Jovens</h3>
+          <p class="card-meta">Sex, 20:15</p>
           <p class="card-text">Conexão, estudo e atividades.</p>
           <button class="btn-outline">Inscrever-se</button>
         </article>
         <article class="card">
-          <h3 class="card-title">Estudo Bíblico</h3>
-          <p class="card-meta">Qua, 19:00 — Sala 2</p>
+          <h3 class="card-title">Reunião de Homens</h3>
+          <p class="card-meta">Seg, 20:00</p>
           <p class="card-text">Reflexões e conversas guiadas.</p>
           <button class="btn-outline">Inscrever-se</button>
         </article>
@@ -87,7 +83,13 @@
           </div>
         </div>
         <div class="calendar-grid" role="grid">
-          <div class="cal-weekday">Seg</div><div class="cal-weekday">Ter</div><div class="cal-weekday">Qua</div><div class="cal-weekday">Qui</div><div class="cal-weekday">Sex</div><div class="cal-weekday">Sáb</div><div class="cal-weekday">Dom</div>
+          <div class="cal-weekday">Seg</div>
+          <div class="cal-weekday">Ter</div>
+          <div class="cal-weekday">Qua</div>
+          <div class="cal-weekday">Qui</div>
+          <div class="cal-weekday">Sex</div>
+          <div class="cal-weekday">Sáb</div>
+          <div class="cal-weekday">Dom</div>
           <!-- Apenas demonstrativo -->
           <button class="cal-day has-event" aria-label="Dia 1 — reunião de homens">1</button>
           <button class="cal-day has-event" aria-label="Dia 2 — Estudo Bíblico">2</button>
@@ -115,7 +117,7 @@
           <li><strong>Agenda:</strong> reuniões e tarefas por ministério.</li>
         </ul>
       </div>
-      <form class="login-form" aria-label="Formulário de login">
+      <form id="login-form" class="login-form" aria-label="Formulário de login">
         <div class="form-field">
           <label for="email">Email</label>
           <input id="email" name="email" type="email" placeholder="seu@email.com" required />
@@ -125,8 +127,49 @@
           <input id="senha" name="senha" type="password" placeholder="••••••••" required />
         </div>
         <button type="submit" class="btn-primary">Entrar</button>
-        <p class="form-note"><a href="#">Esqueci minha senha</a></p>
+        <p class="form-note"><a href="#" id="forgot-password">Esqueci minha senha</a> | <a href="#"
+            id="register-link">Criar conta</a></p>
+        <div id="login-message"></div>
       </form>
+
+      <!-- Formulário de Registro -->
+      <form id="register-form" class="login-form" style="display: none;" aria-label="Formulário de registro">
+        <div class="form-field">
+          <label for="reg-name">Nome</label>
+          <input id="reg-name" name="name" type="text" placeholder="Seu nome" required />
+        </div>
+        <div class="form-field">
+          <label for="reg-email">Email</label>
+          <input id="reg-email" name="email" type="email" placeholder="seu@email.com" required />
+        </div>
+        <div class="form-field">
+          <label for="reg-senha">Senha</label>
+          <input id="reg-senha" name="password" type="password" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn-primary">Criar Conta</button>
+        <p class="form-note"><a href="#" id="back-to-login">Voltar ao login</a></p>
+        <div id="register-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Painel de Membros -->
+  <section id="membros" class="section section-muted" style="display: none;">
+    <div class="container">
+      <h2 class="section-title">Painel de Membros</h2>
+      <p>Bem-vindo, <span id="user-name"></span>!</p>
+      <div id="admin-panel" style="display: block;">
+        <h3>Gerenciar Eventos</h3>
+        <form id="event-form">
+          <input type="text" id="event-title" placeholder="Título" required>
+          <textarea id="event-description" placeholder="Descrição" required></textarea>
+          <input type="datetime-local" id="event-date" required>
+          <input type="text" id="event-location" placeholder="Local" required>
+          <button type="submit" class="btn-primary">Adicionar Evento</button>
+        </form>
+        <div id="events-list"></div>
+      </div>
+      <button id="logout-btn" class="btn-outline">Sair</button>
     </div>
   </section>
 
@@ -136,7 +179,8 @@
       <div>
         <h2 id="sobre-title" class="section-title">Sobre a igreja</h2>
         <p class="lead">Somos uma comunidade dedicada a viver e compartilhar a fé com amor, serviço e esperança.</p>
-        <p>Fundada para acolher e inspirar, promovemos encontros, estudos e ações sociais que fortalecem nossa caminhada.</p>
+        <p>Fundada para acolher e inspirar, promovemos encontros, estudos e ações sociais que fortalecem nossa
+          caminhada.</p>
       </div>
       <div class="about-card">
         <h3 class="card-title">Missão</h3>
@@ -147,26 +191,43 @@
     </div>
   </section>
 
+  <!-- Localização -->
+  <section id="localizacao" class="section section-muted" aria-labelledby="localizacao-title">
+    <div class="container">
+      <h2 id="localizacao-title" class="section-title">Onde nos achar</h2>
+      <p>Quadra 7 Área Esp 2 s/n - Sobradinho, Brasília - DF</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.9568419587868!2d-47.80359170000004!3d-15.64728649999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a39ca00919e2b%3A0x5bb918e150b11c53!2sIgreja%20em%20Sobradinho!5e0!3m2!1spt-BR!2sbr!4v1768250434912!5m2!1spt-BR!2sbr" width="600vw" height="500vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
   <!-- Galeria -->
   <section id="galeria" class="section" aria-labelledby="galeria-title">
     <div class="container">
       <h2 id="galeria-title" class="section-title">Galeria de eventos</h2>
       <div class="gallery-grid">
         <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Louvor comunitário com pessoas de mãos levantadas" />
-          <figcaption>Louvor comunitário</figcaption>
+          <img
+            src="https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg"
+            alt="evento" />
+          <figcaption>Evento</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1516026672321-3ea535f0a3b4?q=80&w=1200&auto=format&fit=crop" alt="Vitral com desenho simbólico iluminado pela luz" />
-          <figcaption>Vitral iluminado</figcaption>
+          <img
+            src="https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg"
+            alt="evento" />
+          <figcaption>Evento</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=1200&auto=format&fit=crop" alt="Mãos erguidas durante celebração" />
-          <figcaption>Celebração</figcaption>
+          <img
+            src="https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg"
+            alt="evento" />
+          <figcaption>Evento</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1523365280197-f4f9a44b4b49?q=80&w=1200&auto=format&fit=crop" alt="Casamento no interior da igreja" />
-          <figcaption>Casamento</figcaption>
+          <img
+            src="https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg"
+            alt="evento" />
+          <figcaption>Evento</figcaption>
         </figure>
       </div>
     </div>
@@ -179,17 +240,21 @@
       <div class="blog-grid">
         <article class="blog-card">
           <a href="#" class="blog-media">
-            <img src="https://images.unsplash.com/photo-1532074205216-d0e1f4e0f9aa?q=80&w=1200&auto=format&fit=crop" alt="Cruz de madeira com coroa de espinhos" />
+            <img
+              src="https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg"
+              alt="Cruz de madeira com coroa de espinhos" />
           </a>
           <div class="blog-content">
             <h3 class="blog-title"><a href="#">Reflexões de fé</a></h3>
             <p class="blog-meta">5 de agosto</p>
-            <p class="blog-excerpt">Uma mensagem sobre esperança e comunidade para a semana.</p>
+            <p class="blog-excerpt">Uma mensagem sobre esperança e fé para a semana.</p>
           </div>
         </article>
         <article class="blog-card">
           <a href="#" class="blog-media">
-            <img src="https://images.unsplash.com/photo-1519885272020-52a7f36b1b96?q=80&w=1200&auto=format&fit=crop" alt="Pessoa em oração sob luz natural" />
+            <img
+              src="https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg"
+              alt="Pessoa em oração sob luz natural" />
           </a>
           <div class="blog-content">
             <h3 class="blog-title"><a href="#">Serviço e propósito</a></h3>
@@ -205,12 +270,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="footer-brand">Igreja</p>
-      <p class="footer-note">© 2025 — Comunidade de fé e serviço.</p>
+      <p class="footer-note">© 2025</p>
     </div>
   </footer>
 
   <!-- Script mínimo para menu mobile (opcional) -->
   <script>
+    // Menu mobile
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
     toggle.addEventListener('click', () => {
