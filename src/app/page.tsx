@@ -40,8 +40,7 @@ export default function Home() {
             className="nav-toggle"
             aria-label="Abrir menu"
             aria-expanded={menuOpen}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
+            onClick={() => setMenuOpen(!menuOpen)}>
             ☰
           </button>
         </div>
@@ -96,8 +95,7 @@ export default function Home() {
       <section
         id="sobre"
         className="section section-muted"
-        aria-labelledby="sobre-title"
-      >
+        aria-labelledby="sobre-title">
         <div className="container about-grid">
           <div>
             <h2 id="sobre-title" className="section-title">
@@ -124,8 +122,7 @@ export default function Home() {
       <section
         id="localizacao"
         className="section"
-        aria-labelledby="localizacao-title"
-      >
+        aria-labelledby="localizacao-title">
         <div className="container">
           <h2 id="localizacao-title" className="section-title">
             Onde nos achar
@@ -138,8 +135,7 @@ export default function Home() {
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+            referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
 
