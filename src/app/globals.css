@@ -1,9 +1,10 @@
-/* Paleta e tipografia */
+@import "tailwindcss";
+
 :root {
   --color-bg: #ffffff;
   --color-text: #2a2a2a;
   --color-muted: #f6f6f6;
-  --color-gold: #CFA64B; /* dourado elegante */
+  --color-gold: #CFA64B;
   --color-gold-dark: #9f7a2f;
   --color-border: #e6e6e6;
 
@@ -14,7 +15,6 @@
   --shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-/* Reset básico */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -25,7 +25,6 @@ body {
   line-height: 1.6;
 }
 
-/* Containers e seções */
 .container {
   width: 100%;
   max-width: 1100px;
@@ -47,7 +46,6 @@ body {
   letter-spacing: 0.2px;
 }
 
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -100,7 +98,6 @@ body {
   padding-bottom: 4px;
 }
 
-/* Botões */
 .btn-primary {
   display: inline-block;
   padding: 12px 18px;
@@ -130,16 +127,6 @@ body {
 }
 .btn-link:hover { color: var(--color-gold-dark); }
 
-/* .btn-icon {
-  background: transparent;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-.btn-icon:hover { border-color: var(--color-gold); color: var(--color-gold-dark); } */
-
-/* Hero */
 .hero {
   position: relative;
   min-height: 60vh;
@@ -148,7 +135,6 @@ body {
   background:
     linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.9)),
     url("https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg") center/cover no-repeat;
-    /* url("https://static.vecteezy.com/ti/fotos-gratis/t2/71546634-raios-iluminar-elevado-maos-dentro-euforico-adorar-espiritual-unidade-diwali-festivais-brilho-abracos-diversidade-e-celebracao-foto.jpg") center/cover no-repeat; */
 }
 .hero-overlay { display: none; }
 .hero-content {
@@ -166,7 +152,6 @@ body {
   margin-bottom: 22px;
 }
 
-/* Cards de eventos */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -193,7 +178,6 @@ body {
   margin: 0 0 12px;
 }
 
-/* Sobre */
 .about-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -208,7 +192,6 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* Rodapé */
 .site-footer {
   border-top: 1px solid var(--color-border);
   padding: 26px 0;
@@ -225,7 +208,6 @@ body {
 }
 .footer-note { color: #777; }
 
-/* Responsividade */
 @media (max-width: 1024px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; }
