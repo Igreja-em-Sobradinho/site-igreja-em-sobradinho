@@ -27,12 +27,9 @@ Este projeto é um site completo para igreja, desenvolvido com tecnologias moder
 ```
 projeto-igr/
 ├── index.html          # Página inicial
-├── evento.html         # Página de eventos
-├── galeria.html        # Página da galeria
 ├── css/
 │   └── style.css       # Estilos globais
 ├── back-end/
-│   └── menu-mobile.js  # 
 └── README.md           # Este arquivo
 ```
 

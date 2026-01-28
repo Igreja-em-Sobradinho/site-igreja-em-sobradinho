@@ -29,12 +29,14 @@ body {
 .container {
   width: 100%;
   max-width: 1100px;
-  min-height: 400px;
   margin: 0 auto;
   padding: 0 20px;
 }
 .section {
+  display: flex;
+  align-items: center;
   padding: 72px 0;
+  min-height: 450px;
 }
 .section-muted {
   background: var(--color-muted);
@@ -145,10 +147,7 @@ body {
   min-height: 60vh;
   display: grid;
   align-items: center;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.9)),
-    url("https://static.vecteezy.com/ti/fotos-gratis/t2/70103012-pessoas-levantar-maos-dentro-celebracao-para-luz-esperancoso-comunidade-encontro-gratis-foto.jpg") center/cover no-repeat;
-    /* url("https://static.vecteezy.com/ti/fotos-gratis/t2/71546634-raios-iluminar-elevado-maos-dentro-euforico-adorar-espiritual-unidade-diwali-festivais-brilho-abracos-diversidade-e-celebracao-foto.jpg") center/cover no-repeat; */
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.8)), /* rgba(255,255,255,0.65), rgba(255,255,255,0.9) */ url("../img/IGS.jpeg") center/cover no-repeat;
 }
 .hero-overlay { display: none; }
 .hero-content {
@@ -207,6 +206,33 @@ body {
   padding: 18px;
   box-shadow: var(--shadow);
 }
+
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Localização */
+.iframe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:0;
+  box-shadow: var(--shadow);
+}
+.mapa{
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 15px 0;
+}
+
 
 /* Rodapé */
 .site-footer {
