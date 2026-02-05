@@ -10,7 +10,7 @@ export default function Home() {
       <header className="site-header">
         <div className="container header-inner">
           <a href="#" className="brand" aria-label="Página inicial">
-            <span className="brand-name">Igreja</span>
+            <span className="brand-name">Igreja em Sobradinho</span>
           </a>
           <nav className={`nav ${menuOpen ? "open" : ""}`}>
             <ul className="nav-list">
@@ -49,7 +49,7 @@ export default function Home() {
       <section id="hero" className="hero" aria-label="Banner de boas-vindas">
         <div className="hero-overlay"></div>
         <div className="container hero-content">
-          <h1 className="hero-title">Jesus é o senhor!</h1>
+          <h1 className="hero-title">Jesus é o Senhor!</h1>
           <p className="hero-subtitle">fé, serviço e esperança.</p>
           <div className="hero-actions">
             <a className="btn-primary" href="#eventos">
@@ -70,22 +70,12 @@ export default function Home() {
           <div className="cards">
             <article className="card">
               <h3 className="card-title">Reunião de Domingo</h3>
-              <p className="card-meta">Dom, 9:30</p>
+              <p className="card-meta">Dom, 9h30</p>
               <p className="card-text">Partir do pão.</p>
             </article>
             <article className="card">
-              <h3 className="card-title">Reunião de Jovens</h3>
-              <p className="card-meta">Sex, 20:15</p>
-              <p className="card-text">Estudo da Palavra</p>
-            </article>
-            <article className="card">
-              <h3 className="card-title">Reunião de Homens</h3>
-              <p className="card-meta">Seg, 20:00</p>
-              <p className="card-text">Reflexões e conversas guiadas.</p>
-            </article>
-            <article className="card">
               <h3 className="card-title">Reunião de Sabado</h3>
-              <p className="card-meta">Sab, 19:30</p>
+              <p className="card-meta">Sab, 19h30</p>
               <p className="card-text">Estudo da Palavra</p>
             </article>
           </div>
@@ -138,10 +128,9 @@ export default function Home() {
             referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
-
       <footer className="site-footer">
         <div className="container footer-inner">
-          <p className="footer-brand">Igreja</p>
+          <p className="footer-brand">Igreja em Sobradinho</p>
           <p className="footer-note">© 2025</p>
         </div>
       </footer>
