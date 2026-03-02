@@ -16,8 +16,19 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "Igreja — Bem-vindo",
-  description:
-    "Site da igreja: eventos, login de membros, galeria e blog.",
+  description: "Site da igreja: eventos, login de membros, galeria e blog.",
+  icons: {
+    icon: [
+      {
+        url: "/dark-icon.svg",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/light-icon.svg",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
