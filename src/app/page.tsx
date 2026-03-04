@@ -15,22 +15,22 @@ export default function Home() {
           <nav className={`nav ${menuOpen ? "open" : ""}`}>
             <ul className="nav-list">
               <li>
-                <a className="btn-nav active" href="#hero">
+                <a className="btn-nav" href="#hero">
                   Home
                 </a>
               </li>
               <li>
-                <a className="btn-nav active" href="#eventos">
+                <a className="btn-nav" href="#eventos">
                   Eventos
                 </a>
               </li>
               <li>
-                <a className="btn-nav active" href="#sobre">
+                <a className="btn-nav" href="#sobre">
                   Sobre
                 </a>
               </li>
               <li>
-                <a className="btn-nav active" href="#localizacao">
+                <a className="btn-nav" href="#localizacao">
                   Localização
                 </a>
               </li>
