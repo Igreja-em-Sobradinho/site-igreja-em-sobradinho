@@ -15,8 +15,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Igreja em Sobradinho",
-  description: "Jesus Cristo é o Senhor - Igreja em Sobradinho.",
+  title: "Igreja — Bem-vindo",
+  description: "Site da igreja: eventos, login de membros, galeria e blog.",
   icons: {
     icon: [
       {
